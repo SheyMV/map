@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+          <ion-back-button></ion-back-button>
+          <ion-title>Add New Location</ion-title>
+        </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <div class="map-container">
+        <div class="map-frame" >
+          <div id="map"  #map></div>
+        </div>
+      </div>
+    </ion-row>
+    <ion-row class="add-title">
+      <form [formGroup]="locationForm" (ngSubmit)="onSubmit(locationForm)" >
+          <ion-item>
+          <ion-label  position="stacked">Title</ion-label>
+          <ion-input type="text" formControlName="title"></ion-input>
+        </ion-item>
+          <ion-button  [disabled]="!locationForm.valid" class="submit" type="submit" >Save</ion-button>
+        </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>
