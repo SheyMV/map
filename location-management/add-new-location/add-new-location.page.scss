@@ -1,0 +1,34 @@
+
+
+ion-row.add-title{
+  display: flex;
+  justify-content: center;
+  // To Do Change this later!!!!!!
+  margin-top: 55vh;
+ion-item{
+  width: 100%;
+}
+  ion-button.submit{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+  }
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50vh;
+}
+
+.map-frame {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}

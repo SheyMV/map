@@ -1,0 +1,17 @@
+ion-back-button{
+  width: 1rem;
+}
+ion-row.add-new-loc{
+  height: 25vh;
+  ion-col{
+    display: flex;
+    ion-button{
+      width: 80vw;
+      height: 5vh;
+    }
+  }
+}
+ion-row.your-loc{
+display: flex;
+}
+

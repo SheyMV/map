@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+          <ion-back-button></ion-back-button>
+          <ion-title>Location Management</ion-title>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row class="add-new-loc">
+    <ion-col class="ion-justify-content-center ion-align-items-center">
+      <ion-button [routerLink]="['/add-new-location']" >
+        <ion-icon  name="add-outline"></ion-icon>
+        Add New Location
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="your-loc">
+    <ion-col size="12">
+      <h2>Your Locations</h2>
+    </ion-col>
+    <ion-col>
+        <ion-card>
+          <ion-item *ngFor="let location of addedLocArray" >
+            <ion-label class="title ion-text-center">{{location.title}}</ion-label>
+            <ion-button (click)="deleteLocation(location.lat,location.lng)" class="delete-loc">
+              <ion-icon  name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
